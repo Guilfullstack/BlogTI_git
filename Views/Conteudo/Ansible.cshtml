@@ -1,0 +1,124 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog GTI</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <style>
+        .capa {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .capa img {
+            width: 100%;
+            max-width: 600px;
+            /* Define a largura máxima da imagem para evitar esticamento */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="capa">
+        <img src="~/images/ansible.png" alt="Imagem de Capa">
+    </div>
+
+    <article id="article">
+        <section id="postagens">
+            <div class="post">
+                <h2>Automatizando Tarefas com Ansible</h2>
+                <p>O Ansible é uma ferramenta de automação de TI amplamente utilizada para simplificar e automatizar
+                    tarefas repetitivas de gerenciamento de infraestrutura. Com o Ansible, é possível provisionar
+                    servidores, configurar aplicativos, implementar atualizações e muito mais, tudo de forma
+                    automatizada e escalável.</p>
+                <p>Uma das principais vantagens do Ansible é sua simplicidade e facilidade de uso. Utilizando uma
+                    abordagem baseada em YAML, os usuários podem descrever suas configurações de maneira declarativa, o
+                    que torna o processo de automação mais intuitivo e acessível, mesmo para aqueles sem experiência
+                    avançada em programação.</p>
+                <p>Além disso, o Ansible é altamente flexível e pode ser integrado facilmente com outras ferramentas e
+                    tecnologias. Ele suporta uma ampla variedade de plataformas e sistemas operacionais, permitindo que
+                    os usuários automatizem processos em ambientes heterogêneos.</p>
+                <p>No mundo da computação em nuvem e da infraestrutura como código (IaC), o Ansible desempenha um papel
+                    fundamental, facilitando a implantação e o gerenciamento de recursos em escala, tanto em ambientes
+                    locais quanto em nuvem.</p>
+            </div>
+            <div class="post">
+                <h2>Implementando Playbooks Avançados com Ansible</h2>
+                <p>Os playbooks são a espinha dorsal do Ansible e permitem automatizar tarefas complexas de
+                    infraestrutura de maneira eficiente. Nesta postagem, exploraremos técnicas avançadas para criar
+                    playbooks poderosos e reutilizáveis.</p>
+                <p>Você aprenderá como organizar e estruturar seus playbooks de forma eficaz, usar variáveis e loops
+                    para simplificar tarefas repetitivas, e implementar condições e handlers para lidar com casos de
+                    erro e atualizações.</p>
+                <p>Com este conhecimento, você será capaz de criar playbooks mais robustos e escaláveis para automatizar
+                    processos em sua infraestrutura de TI de forma eficiente.</p>
+            </div>
+
+            <div class="post">
+                <h2>Gerenciando Configurações de Rede com Ansible</h2>
+                <p>O Ansible não é apenas uma ferramenta para gerenciamento de servidores, mas também pode ser usado
+                    para gerenciar configurações de rede. Nesta postagem, vamos explorar como usar o Ansible para
+                    automatizar tarefas de configuração e manutenção de redes.</p>
+                <p>Você aprenderá como criar playbooks para configurar roteadores, switches e firewalls, definir
+                    políticas de segurança, implementar VLANs e muito mais. Com o Ansible, você pode simplificar o
+                    gerenciamento de sua infraestrutura de rede e garantir consistência e conformidade em toda a sua
+                    rede.</p>
+                <p>Se você é um administrador de rede em busca de maneiras de automatizar tarefas repetitivas e melhorar
+                    a eficiência operacional, esta postagem é para você!</p>
+            </div>
+
+            <div class="post">
+                <h2>Integração Contínua com Ansible e Jenkins</h2>
+                <p>A integração contínua é uma prática essencial no desenvolvimento de software moderno. Nesta postagem,
+                    vamos explorar como integrar o Ansible com o Jenkins para automatizar processos de integração
+                    contínua e implantação contínua.</p>
+                <p>Você aprenderá como configurar pipelines no Jenkins para automatizar a execução de playbooks do
+                    Ansible, testar e implantar aplicativos de forma contínua. Com esta integração, você pode acelerar o
+                    ciclo de vida de desenvolvimento de software e melhorar a qualidade e confiabilidade de seus
+                    aplicativos.</p>
+                <p>Se você está procurando maneiras de automatizar e otimizar seus processos de desenvolvimento e
+                    implantação, esta postagem é para você!</p>
+            </div>
+
+            <div class="post">
+                <h2>Orquestração de Contêineres com Ansible</h2>
+                <p>O uso de contêineres está se tornando cada vez mais popular para implantar e gerenciar aplicativos.
+                    Nesta postagem, vamos explorar como usar o Ansible para orquestrar contêineres e automatizar o
+                    gerenciamento de infraestrutura baseada em contêineres.</p>
+                <p>Você aprenderá como criar playbooks do Ansible para provisionar, configurar e escalar contêineres em
+                    plataformas como Docker, Kubernetes e OpenShift. Com o Ansible, você pode simplificar o processo de
+                    implantação e gerenciamento de aplicativos baseados em contêineres e garantir consistência e
+                    confiabilidade em todo o seu ambiente de contêineres.</p>
+                <p>Se você está explorando contêineres como uma solução de implantação para seus aplicativos, esta
+                    postagem é um guia essencial para usar o Ansible como ferramenta de orquestração.</p>
+            </div>
+
+            <!-- Adicione mais posts conforme desejado -->
+
+
+        </section>
+
+        <aside id="lateral">
+            <div class="cont-lateral">
+                <h3>Recursos Adicionais</h3>
+                <ul>
+                    <li><a href="https://docs.ansible.com/">Documentação Oficial do Ansible</a></li>
+                    <li><a href="https://www.ansible.com/blog">Blog do Ansible</a></li>
+                    <li><a href="https://github.com/ansible/ansible">Repositório no GitHub</a></li>
+                </ul>
+            </div>
+        </aside>
+    </article>
+
+    <footer id="rodape">
+        Todos os direitos reservados &copy; 2024
+    </footer>
+</body>
+
+</html>

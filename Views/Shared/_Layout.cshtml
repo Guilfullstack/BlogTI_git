@@ -1,0 +1,98 @@
+﻿@{
+    string currentPage = Context.Request.Path;
+    bool isHomePage = currentPage.EndsWith("/", StringComparison.OrdinalIgnoreCase);
+    bool isCriadoresPage = currentPage.EndsWith("/Home/Criadores", StringComparison.OrdinalIgnoreCase);
+
+}
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DevOps</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DevOps.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            background-color: #F0F0F0;
+            ;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/gti.jpg" alt="Logo" width="50" height="50">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Conteudo"
+                                asp-action="Ansible">Conteudos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="Criadores">Criadores</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    @if (!isCriadoresPage)
+    {
+        <div id="nav-rolavel" class="container-fluid" style="@(isHomePage? "display: none;" : "")">
+            <h1>Conteúdos</h1>
+            <div class="row">
+                <div class="col-12">
+                    <div class="overflow-auto" style="max-width: 100%; white-space: nowrap;">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#cont1">Ansible</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#cont2">Docker</a>
+                            </li>
+                            <!-- Adicione mais itens conforme necessário -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="container">
+
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - DevOps - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
