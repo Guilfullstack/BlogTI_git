@@ -17,10 +17,6 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Ansible()
-    {
-        return View();
-    }
     public IActionResult Criadores()
     {
         return View();

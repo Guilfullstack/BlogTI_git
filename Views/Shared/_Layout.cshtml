@@ -4,13 +4,26 @@
     bool isCriadoresPage = currentPage.EndsWith("/Home/Criadores", StringComparison.OrdinalIgnoreCase);
 
 }
+@{
+    //Lista de paginas
+    List<String> listaPaginas = new List<String>(
+    [
+    "Ansible",
+"Docker",
+"Cloud",
+"Linux",
+"Virtualizacao"
+    ]
+    );
+}
+
 <!DOCTYPE html>
 <html lang="ptbr">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - DevOps</title>
+    <title>BlogGti - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DevOps.styles.css" asp-append-version="true" />
@@ -42,7 +55,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Conteudo"
-                                asp-action="Ansible">Conteudos</a>
+                                asp-action="Index">Conteudos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home"
@@ -63,13 +76,15 @@
                 <div class="col-12">
                     <div class="overflow-auto" style="max-width: 100%; white-space: nowrap;">
                         <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#cont1">Ansible</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#cont2">Docker</a>
-                            </li>
-                            <!-- Adicione mais itens conforme necessário -->
+                            @{
+                                foreach (var pagina in listaPaginas)
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link" sp-controller="Conteudo" asp-action="@pagina">@pagina</a>
+                                    </li>
+                                }
+                            }
+
                         </ul>
                     </div>
                 </div>
