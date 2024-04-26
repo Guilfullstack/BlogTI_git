@@ -1,0 +1,102 @@
+@{
+    ViewData["Title"] = "Docker";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <style>
+        .capa {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .capa img {
+            width: 100%;
+            max-width: 600px;
+            /* Define a largura máxima da imagem para evitar esticamento */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="capa">
+        <img src="~/images/docker.png" alt="Imagem de Capa">
+    </div>
+
+    <article id="article">
+        <section id="postagens">
+            <div class="post">
+                <h2>Desvendando o Docker</h2>
+                <p>O Docker é uma plataforma de código aberto que permite empacotar, distribuir e executar aplicativos
+                    em contêineres. Com o Docker, os desenvolvedores podem empacotar suas aplicações com todas as
+                    dependências em um contêiner, garantindo que elas funcionem de maneira consistente em qualquer
+                    ambiente.</p>
+                <p>Uma das principais vantagens do Docker é sua leveza e eficiência. Os contêineres Docker compartilham
+                    o núcleo do sistema operacional host, o que os torna mais leves em comparação com as máquinas
+                    virtuais tradicionais, resultando em tempos de inicialização mais rápidos e melhor utilização de
+                    recursos.</p>
+                <p>Além disso, o Docker oferece uma abordagem padronizada para empacotar e distribuir aplicativos,
+                    simplificando o processo de implantação e gerenciamento de aplicações em diferentes ambientes, seja
+                    localmente, em nuvem ou em um ambiente híbrido.</p>
+                <p>No contexto de desenvolvimento de software moderno e práticas como DevOps e CI/CD, o Docker tornou-se
+                    uma ferramenta indispensável, permitindo aos desenvolvedores criar, testar e implantar aplicativos
+                    de forma rápida e confiável.</p>
+            </div>
+            <div class="post">
+                <h2>Conceitos Fundamentais do Docker</h2>
+                <p>Para entender completamente o Docker, é importante familiarizar-se com alguns conceitos fundamentais:</p>
+                <ul>
+                    <li><strong>Contêiner:</strong> Uma unidade isolada que contém o aplicativo e todas as suas
+                        dependências, garantindo que ele funcione de maneira consistente em qualquer ambiente.</li>
+                    <li><strong>Imagem:</strong> Um modelo de somente leitura usado para criar contêineres. Uma imagem
+                        contém o código do aplicativo, bibliotecas, dependências e outras configurações necessárias para
+                        executar o aplicativo.</li>
+                    <li><strong>Dockerfile:</strong> Um arquivo de texto que contém instruções para construir uma imagem
+                        Docker. O Dockerfile especifica os passos necessários para configurar o ambiente do contêiner e
+                        executar o aplicativo.</li>
+                    <li><strong>Registry:</strong> Um serviço que armazena e distribui imagens Docker. O Docker Hub é um
+                        exemplo de registro público onde os desenvolvedores podem encontrar e compartilhar imagens
+                        Docker.</li>
+                    <li><strong>Orquestração:</strong> O processo de gerenciar e escalar contêineres em um ambiente
+                        distribuído. Ferramentas como Docker Swarm e Kubernetes facilitam a orquestração de contêineres
+                        em larga escala.</li>
+                </ul>
+                <p>Compreender esses conceitos é essencial para aproveitar ao máximo o Docker e suas capacidades de
+                    empacotamento e implantação de aplicativos.</p>
+            </div>
+            <div class="post">
+                <h2>Implantando Aplicações com Docker Compose</h2>
+                <p>O Docker Compose é uma ferramenta que simplifica o processo de definição e execução de aplicativos
+                    Docker multi-container. Com o Docker Compose, é possível descrever a estrutura de uma aplicação
+                    utilizando um arquivo YAML e, em seguida, iniciar todos os contêineres necessários com um único
+                    comando.</p>
+                <p>Usando o Docker Compose, os desenvolvedores podem definir serviços, redes e volumes para sua
+                    aplicação, permitindo a configuração e o gerenciamento de vários contêineres de forma simples e
+                    eficiente.</p>
+                <p>Esta abordagem é especialmente útil para aplicações compostas por vários componentes, como
+                    aplicativos web que requerem servidores da web, bancos de dados e caches. Com o Docker Compose, é
+                    fácil configurar e implantar todos esses componentes como um único conjunto coeso.</p>
+            </div>
+
+            <div class="post">
+                <h2>Segurança e Isolamento com Docker</h2>
+                <p>A segurança é uma consideração fundamental ao trabalhar com contêineres Docker. Embora os contêineres
+                    ofereçam isolamento entre aplicativos, é importante implementar práticas de segurança para proteger
+                    os contêineres e os dados que eles contêm.</p>
+                <p>O Docker fornece várias funcionalidades de segurança, incluindo:</p>
+                <ul>
+                    <li><strong>Namespaces e Cgroups:</strong> Mecanismos do kernel Linux que garantem o isolamento entre
+                        contêineres, limitam os recursos disponíveis e garantem que cada contêiner tenha sua própria
+                        visão do sistema operacional.</li>
+                    <li><strong>Capacaparabalidades:</strong> Os contêineres Docker podem ter suas capacidades
+                        limitadas, restringindo o acesso a recursos sensíveis do sistema, como dispositivos de hardware e
+                        diretórios críticos.</li>
+                    <li><strong>Seccomp:</strong> Um mecanismo que restringe as chamadas de sistema disponíveis para um
+                        contêiner, reduzindo assim sua superfície de ataque.</li>
+                    <li><strong>AppArmor e SELinux:</strong> Mecanismos de segurança adicionais que podem ser usados para
+                        aplicar políticas de segurança mais rigorosas em contêineres
