@@ -1,6 +1,6 @@
 # Blog de Tecnologia
 
-Este projeto é um blog desenvolvido para compartilhar conteúdos relacionados à tecnologia.
+Este projeto é um blog desenvolvido para compartilhar conteúdos relacionados à tecnologia. Como proposta para um trabalho da Faculdade.
 
 ## Como testar o projeto
 
